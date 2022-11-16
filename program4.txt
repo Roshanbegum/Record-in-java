@@ -1,0 +1,47 @@
+
+Record Person(String name, double weight, double height, String foodhabbit,double age) {
+Person() {
+this("Roshan",55.33,45,"Veg",19); 
+}
+public static void main(String args[]) {
+Person a=new Person("Roshan",55.33,45,"Veg",19);
+System.out.println(a);
+}
+}
+record Student(int rollno, String name, int fee,String class) 
+{
+Student() {
+this(111,"Roshan",5000,"Bsc.Mscs");
+ }
+public static void main(String args[]) {
+Student r=new Student(222,"Yamini",5000,"Bsc.Mscs");
+Student r1=new Student(223,"Asha",5000,"Bsc.Mscs");
+Student r2=new Student(224,"Revathi",5000,"Bsc.Mscs");
+Student r3=new Student(225,"Rojalini",5000,"Bsc.Mscs");
+Student r4=new Student(226,"Sai sindhuja",5000,"Bsc.Mscs);
+System.out.println(r);
+System.out.println(r1);
+System.out.println(r2);
+System.out.println(r3);
+System.out.println(r4);
+}
+}
+
+//Example
+interface Drawable {
+int a=55;
+void draw();             // abstract method =no body
+static int cube(int x) {         // static method in interface
+return x*x*x; }
+default void print() {
+System.out.println("Default method");}}
+class TestInterface7 implements Drawable {
+public void draw() {
+System.out.println("drawing something");}
+public static void main(String[] args){
+Drawable d=new TestInterface7();
+System.out.println(d.a);
+d.draw();
+System.out.println(Drawable.cube(5));
+d.print();}
+}
